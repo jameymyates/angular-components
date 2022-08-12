@@ -1,0 +1,22 @@
+.browse-happy {
+  top: 63px;
+  right: 0;
+  left: 0;
+  position: absolute;
+
+  @media (min-width: 569px) and (max-width: 768px) {
+    top: 101px;
+  }
+
+  @media (min-width: 1025px) {
+    top: 152px;
+  }
+}
+
+.browse-happy.ng-hide-add {
+  @include animation-duration(.5s);
+  @include animation-fill-mode(both);
+  @include animation-name(slideOutUp);
+  @include transition(.5s linear all);
+  display: block !important;
+}

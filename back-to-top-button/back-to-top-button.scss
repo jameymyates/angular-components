@@ -1,0 +1,19 @@
+.back-to-top-button {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  bottom: 20px;
+  display: none;
+  line-height: 1;
+  @include opacity(0);
+  padding: 12px;
+  position: fixed;
+  right: 20px;
+  text-decoration: none;
+  @include transition(opacity .3s ease, bottom .3s ease);
+  z-index: $zindex-navbar-fixed;
+
+  &.visible {
+    display: block;
+    @include opacity(1);
+  }
+}

@@ -1,0 +1,23 @@
+#header {
+  position: fixed;
+  top: 0;
+  @include transition-duration(.5s);
+  @include transition-timing-function(cubic-bezier(0.215, 0.610, 0.355, 1.000));
+  @include transition-property(transform);
+  width: 100%;
+  z-index: 1030;
+}
+
+.header--hidden {
+  display: block !important;
+  visibility: visible !important;
+  @include translate(0, -60px);
+
+  @media (min-width: 569px) and (max-width: 768px) {
+    @include translate(0, -101px);
+  }
+
+  @media (min-width: 1025px) {
+    @include translate(0, -152px);
+  }
+}
